@@ -1,5 +1,5 @@
 {
-  "name": "radio-nowplaying-advanced",
+  "name": "radio-nowplaying-zenoapi",
   "version": "1.0.0",
   "main": "server.js",
   "type": "module",

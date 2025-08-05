@@ -1,0 +1,24 @@
+import icy from 'icy';
+import express from 'express';
+
+const app = express();
+
+app.get('/nowplaying', (req, res) => {
+  icy.get('https://stream.zeno.fm/616ax0ypt5quv', (stream) => {
+    stream.on('metadata', (meta) => {
+      const parsed = icy.parse(meta);
+      res.json({ title: parsed.StreamTitle });
+      stream.destroy();
+    });
+  }).on('error', () => res.json({ title: 'Desconocido' }));
+});
+
+app.listen(3000, () => console.log('API escuchando en :3000'));
+async function obtenerCancion() {
+  const res = await fetch('/nowplaying');
+  const { title } = await res.json();
+  document.getElementById('radio-info')
+    .innerText = `🎵 Ahora suena: ${title || 'Desconocido'}`;
+}
+obtenerCancion();
+setInterval(obtenerCancion, 15000);

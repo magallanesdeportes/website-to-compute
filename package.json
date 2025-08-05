@@ -1,5 +1,5 @@
 {
-  "name": "radio12pm-api",
+  "name": "radio12pm-api-zeno",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "express": "^4.18.2",
-    "icy": "^2.1.0",
-    "cors": "^2.8.5"
+    "cors": "^2.8.5",
+    "node-fetch": "^2.6.1"
   }
 }

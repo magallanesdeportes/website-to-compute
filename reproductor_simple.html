@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Reproductor Simple</title>
+<style>
+  body { margin: 0; font-family: Arial, sans-serif; background: #222; color: #fff; }
+  .player-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #333;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .player-bar button {
+    background: #555;
+    border: none;
+    color: #fff;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  .player-bar button:hover { background: #777; }
+</style>
+</head>
+<body>
+  <div class="player-bar">
+    <span>Radio Online</span>
+    <audio id="audioPlayer" controls>
+      <source src="TU_STREAM_URL_AQUI" type="audio/mpeg">
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+  </div>
+</body>
+</html>

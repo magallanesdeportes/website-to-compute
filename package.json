@@ -1,5 +1,5 @@
 {
-  "name": "radio-nowplaying",
+  "name": "radio-nowplaying-advanced",
   "version": "1.0.0",
   "main": "server.js",
   "type": "module",
